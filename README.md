@@ -6,8 +6,8 @@ A powerful **browser-based code editor** inspired by VS Code and CodePen, built 
 
 ## 📸 Screenshot
 
-![DevStudio Editor Screenshot](<img width="1919" height="1069" alt="Screenshot 2026-03-22 222756" src="https://github.com/user-attachments/assets/2695e503-7c19-4d42-ae42-2f7a78e9ad04" />
-)
+ 
+<img width="1919" height="1069" alt="Screenshot 2026-03-22 222756" src="https://github.com/user-attachments/assets/1e920fb1-34d8-4aec-815d-8a11b4824273" />
 
  
 ---
