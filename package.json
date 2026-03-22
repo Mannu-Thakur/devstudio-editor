@@ -1,0 +1,27 @@
+{
+  "name": "code_editor",
+  "version": "1.0.0",
+  "description": "📝 Basic Code Editor",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mannu-Thakur/basic_code_editor.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Mannu-Thakur/basic_code_editor/issues"
+  },
+  "homepage": "https://github.com/Mannu-Thakur/basic_code_editor#readme",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "mongoose": "^9.3.1"
+  }
+}

@@ -1,39 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Basic Code Editor</title>
-     <link rel="stylesheet" href="index.css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
-          integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
-          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevStudio Editor</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="index.css">
+
+    <!-- Monaco Loader -->
+    <script src="https://unpkg.com/monaco-editor@latest/min/vs/loader.js"></script>
 </head>
+
 <body>
-     <div class="container">
-          <div class="left">
-               <div class="box">
-                    <label for="html">HTML <i class="fa-brands fa-html5"></i></label>
-                    <textarea id="html" onkeyup="run()"></textarea>
-               </div>
 
-               <div class="box">
-                    <label for="css">CSS <i class="fa-brands fa-css3"></i></label>
-                    <textarea id="css" onkeyup="run()"></textarea>
-               </div>
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <button onclick="shareProject()">🔗 Share</button>
+        <button onclick="downloadProject()">⬇ Download</button>
+        <button onclick="run()">▶ Run</button>
+        <button onclick="clearConsole()">🧹 Console</button>
+    </div>
 
-               <div class="box">
-                    <label for="js">JS <i class="fa-brands fa-js"></i></label>
-                    <textarea id="js" onkeyup="run()"></textarea>
-               </div>
-          </div>
+    <!-- MAIN -->
+    <div class="container">
 
-          <div class="right">
-               <label for="output">Output <i class="fa-solid fa-play"></i></label>
-               <iframe id="output"></iframe>
-          </div>
-     </div>
+        <!-- LEFT PANEL -->
+        <div class="left">
 
-     <script src="index.js"></script>
+            <!-- TABS -->
+            <div class="tabs">
+                <div class="tab active" onclick="switchTab('html')">HTML</div>
+                <div class="tab" onclick="switchTab('css')">CSS</div>
+                <div class="tab" onclick="switchTab('js')">JS</div>
+            </div>
+
+            <!-- MONACO EDITOR -->
+            <div id="editor" class="editor"></div>
+
+        </div>
+
+        <!-- RESIZER -->
+        <div class="resizer" id="resizer"></div>
+
+        <!-- RIGHT PANEL -->
+        <div class="right">
+
+            <!-- OUTPUT -->
+            <iframe id="output" sandbox="allow-scripts"></iframe>
+
+            <!-- CONSOLE -->
+            <div class="console">
+                <h3>Console</h3>
+                <div id="console"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+
+    <!-- JS -->
+    <script src="index.js"></script>
+
 </body>
 </html>
